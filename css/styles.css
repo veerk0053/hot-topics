@@ -1,0 +1,228 @@
+:root {
+    --primary-color: #232323;
+    --secondary-color: #b1b1b1;
+    --tertiary-color: #f2f2f7;
+    --text-color: #333;
+    --border-color: #e1e4e8;
+}
+
+body {
+    font-family: neue-haas-grotesk-display, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    line-height: 1.6;
+    font-size: 0.75rem;
+    margin: 0;
+    padding: 0;
+    color: var(--text-color);
+    background-color: var(--tertiary-color);
+}
+
+header {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 1rem 2rem;
+    text-align: center;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
+.logoimg {
+    width: 14%;
+    height: auto;
+    filter: invert(1);
+}
+.logoimg:hover, .logoimg:focus{
+    rotate: 720deg;
+    transition: 2s ease;
+}
+
+.logo a {
+    font-size: 1.8rem;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+}
+
+.nav-bar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-bar li {
+    margin: 0 1.5rem;
+}
+
+.nav-bar a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-bar a:hover {
+    color: #e1e4e8;
+}
+
+.button {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    margin-bottom: 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff;
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    transition: all 1s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.button:hover,
+.button:focus {
+    background-color: #414141;
+    box-shadow: 0 4px 8px rgba(91, 91, 91, 0.3);
+    transition: all 0.3s ease;
+}
+
+.button:active {
+    background-color: #111;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+}
+
+.masthead {
+    background-image: url('../img/milad-fakurian-nY14Fs8pxT8-unsplash.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 3rem 2rem;
+    color: #fff;
+    text-align: center;
+}
+
+footer {
+    background-color: var(--tertiary-color);
+    color: var(--text-color);
+    padding: 1rem 2rem;
+    text-align: center;
+    box-shadow: 0 -1px 3px rgba(0,0,0,0.2);
+}
+
+.social-icon {
+    margin: 0 0.5rem;
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+    color: var(--primary-color);
+}
+
+#main-content {
+    margin: 2rem auto;
+    width: 90%;
+    max-width: 1200px;
+}
+
+.article {
+    margin-bottom: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.article img {
+    margin-right: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.article p {
+    margin: 1rem 0;
+    overflow: hidden;
+    padding: 1rem;
+}
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.card {
+    flex: 1 1 calc(100% - 1.5rem);
+    box-sizing: border-box;
+    border: 1px solid var(--border-color);
+    padding: 1.5rem;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    background-color: #fff;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.02);
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+@media (min-width: 35rem) {
+    .nav-bar li {
+        margin: 0 2rem;
+    }
+    body{
+        font-size: 1rem;
+    }
+    .button {
+        font-size: 2rem;
+    }
+    .masthead {
+        background-image: url('../img/milad-fakurian-nY14Fs8pxT8-unsplash.jpg');
+    }
+
+    .article {
+        flex-wrap: nowrap;
+    }
+
+    .cards-container {
+        gap: 1.5rem;
+    }
+
+    .card {
+        flex: 1 1 calc(50% - 1.5rem);
+    }
+}
+
+@media (min-width: 80rem) {
+    .masthead {
+        background-image: url('../img/milad-fakurian-nY14Fs8pxT8-unsplash.jpg');
+    }
+    body{
+        font-size: 1.25rem;
+    }
+    .button {
+        font-size: 2rem;
+    }
+    .cards-container {
+        gap: 1.5rem;
+    }
+
+    .card {
+        flex: 1 1 calc(33.333% - 1.5rem);
+    }
+}
